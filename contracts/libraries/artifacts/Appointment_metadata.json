@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/libraries/AppointmentReminder.sol": "Appointment"
+			"contracts/libraries/Appointment.sol": "Appointment"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -32,11 +32,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/libraries/AppointmentReminder.sol": {
-			"keccak256": "0x3d899603ee8eb6897b1a9eb54df29f64d8507267fa9ef05bbf8a9409f03284f8",
+		"contracts/libraries/Appointment.sol": {
+			"keccak256": "0x85959158e69195b8ec0b533226411b01bca82fb8afcfab3f2271876f119ca211",
 			"urls": [
-				"bzz-raw://d29c1e65c4ead5adab2a13a3ccc1c13f94f31655b5f221823cab30060d305770",
-				"dweb:/ipfs/QmVM4SJQyxdXW8kGNioEPuJQUPWsEPZcLF4sE1KHTW78Gg"
+				"bzz-raw://c4f40d2fdf885066b23d332252baa5dafc792b08188b422cc4350e9157b79452",
+				"dweb:/ipfs/QmeUeYxdbvvHf128kGnunyH9JiHB7mCj12dyMa9iiVE7uU"
 			]
 		}
 	},

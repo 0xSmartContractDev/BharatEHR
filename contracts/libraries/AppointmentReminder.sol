@@ -12,8 +12,9 @@
         uint256 date;
         uint256 time;
         address patientAddress;
+        address doctorAddress;
         bool isAvailable;
-        AppointmentReminder reminder;
+        //AppointmentReminder reminder;
     }
     }
     

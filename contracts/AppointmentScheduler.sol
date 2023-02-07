@@ -1,51 +1,69 @@
 pragma solidity ^0.8.17;
 
-contract AppointmentScheduler {
-    struct Appointment {
-        bytes32 id;
-        uint256 date;
-        uint256 time;
-        address patientAddress;
-        bool isAvailable;
-        string reminderMethod;
-        uint256 reminderFrequency;
-        string message;        
-    }
-    
-    //Need to implement modifiers. Change visibility for some methods.
-    //Need to implement array to iterate mapping.
-    mapping (bytes32 => Appointment) public appointments;    
-    
-    function bookAppointment(uint256 _appointmentDate, uint256 _appointmentTime, address patientAddress, string memory _reminderMethod, uint256 _reminderFrequency, string memory _message) external returns (Appointment memory){        
-        bytes32 id = getHashId(_appointmentDate,_appointmentTime);
-        require(appointments[id].isAvailable, "This appointment slot is not available");
-        appointments[id] = Appointment(id, _appointmentDate, _appointmentTime, patientAddress, false,_reminderMethod,_reminderFrequency,_message);        
-        return appointments[id];
-    }
-    
-    function modifyAppointment(bytes32 id, uint256 date, uint256 time) external {
-        Appointment storage appointment = appointments[id];
-        appointment.date = date;
-        appointment.time = time;        
-    }
-    
-    function cancelAppointment(bytes32 id) public {
-        Appointment storage appointment = appointments[id];
-        appointment.date = 0;
-        appointment.time = 0;
-        appointment.patientAddress = address(0);
-        appointment.isAvailable = true;
-    }
+import "./libraries/StructHelpers.sol";
+import "./libraries/Appointment.sol";
 
-    function getAppointment(bytes32 id) public view returns (Appointment memory) {
-    return appointments[id];
+
+// CRUD operations for to Book,Modify,Reschedule,Cancel,Retrieve appointments.
+contract AppointmentScheduler {
+    using Appointment for Appointment.AppointmentRecord;
+
+    mapping (bytes32 => Appointment.AppointmentRecord) public appointments;    
+    mapping(bytes32 => bool) public appointmentStatus;
+    
+
+    /*modifier checkIsDefault(Appointment appt) {
+        require(msg.sender == admin, "Access Denied: Only the admin can perform this action");
+        require(appt.length != 0, "Appointment Data is Zero Bu");
+        _;
+    }*/
+
+    //Creating a new Appointment
+    function bookAppointment(Appointment.AppointmentRecord memory appointment) external returns (Appointment.AppointmentRecord memory){        
+        bytes32 apptId = getHashId(appointment.appointmentDate,appointment.appointmentTime);
+        require(appointmentStatus[apptId], "This appointment slot is not available");
+        require(!(StructHelpers.isDefault(abi.encode(appointment))),"Empty Appointment. Prepare appointment again");
+        // Booking a new Appointment.
+        appointments[apptId] = appointment;
+        // Making Appointment slot unavailable.
+        appointmentStatus[apptId] = false;
+        return appointments[apptId];
+    }
+    
+    /*function modifyAppointment(bytes32 apptId,Appointment.AppointmentRecord memory _appointment) external returns (Appointment.AppointmentRecord memory){
+        //Appointment memory appointment = appointments[apptId];
+        bytes32 id = getHashId(_appointment.appointmentDate,_appointment.appointmentTime);
+        if(apptId != id){
+            require(appointmentStatus[id], "This appointment slot is not available");
+            appointments[id] = _appointment;
+            appointmentStatus[id] = false;
+            
+            // Reset the old appointment to make it a default appointment.
+            appointments[apptId] = new Appointment.AppointmentRecord();
+            //Change old appointment slot to available.
+            appointmentStatus[apptId] = true;            
+        }
+        appointments[apptId] = _appointment;    
+        return _appointment;
+    }
+    
+    function cancelAppointment(bytes32 apptId) external view  {
+        appointments[apptId] = new Appointment.AppointmentRecord();
+        appointmentStatus[apptId] = true;
+    } */
+
+    // Appointment Reschedule Function.
+
+    // Retrieve Appointment.
+    function getAppointment(bytes32 apptId) public view returns (Appointment.AppointmentRecord memory) {
+    return appointments[apptId];
     }
  
-    function checkAvailability(bytes32 id) public view returns (bool) {
-        Appointment storage appointment = appointments[id];
-        return appointment.isAvailable;
+    // Check if the slot is available or not.
+    function checkAvailability(bytes32 slot) public view returns (bool) {        
+        return appointmentStatus[slot];
     }
-    // Only for 1 Doctor-1 facility. If Multiple Doctors or multiple facilities, then use both to get hash ID.
+    // Only for 1 Doctor-1 facility. If Multiple Doctors or multiple facilities, then we have add these 2 param to get hash ID.
     function getHashId(uint256 date, uint256 time) public pure returns (bytes32){
         return keccak256(abi.encodePacked(date, time));
     }
