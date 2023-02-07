@@ -1,0 +1,101 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "appointmentTime",
+						"type": "uint256"
+					}
+				],
+				"name": "AppointmentScheduled",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					}
+				],
+				"name": "getAppointmentTime",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "patient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "appointmentTime",
+						"type": "uint256"
+					}
+				],
+				"name": "scheduleAppointment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PatientScheduling.sol": "PatientScheduling"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PatientScheduling.sol": {
+			"keccak256": "0x6ecc17f2dea672f58ef6167ce06f9780a059d5bca083dcc346863117f1497da4",
+			"urls": [
+				"bzz-raw://34ac0699c591ed1dd892db1bf0c957fa0f4640397462ca06e32847fdf3174da4",
+				"dweb:/ipfs/QmcvtE5h5UQibNHq53Z6N2ReE3wHMWBxpHWJk5ktouPk3L"
+			]
+		}
+	},
+	"version": 1
+}

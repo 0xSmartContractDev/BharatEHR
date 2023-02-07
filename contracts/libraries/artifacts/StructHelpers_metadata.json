@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "isDefault",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/libraries/StructHelpers.sol": "StructHelpers"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/libraries/StructHelpers.sol": {
+			"keccak256": "0xb4b900ab9c112dd225a61d5cb2d2e6eddfb724f63eaa3b93e586ea791922b4bd",
+			"urls": [
+				"bzz-raw://b5281a8cd6545bccca5b757f7887326c8dc83da5e6d6f4a5ba6e42e786e51989",
+				"dweb:/ipfs/QmdLYVkvSRZ8rCwXmu35KPoy5HE6N3Pt8SCEaA4yAUg373"
+			]
+		}
+	},
+	"version": 1
+}

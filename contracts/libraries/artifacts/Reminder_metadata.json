@@ -1,0 +1,44 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/libraries/AppointmentReminder.sol": "Reminder"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/libraries/AppointmentReminder.sol": {
+			"keccak256": "0x14ed39df0c180e7451d1bd6a7dcf4188d5a598a08aa0f2349ad7d72aaf0ea4ce",
+			"urls": [
+				"bzz-raw://5aa428a71f7be3228a70e86a38050256214f70f89ca565847432c9f2f831e4eb",
+				"dweb:/ipfs/QmdDwPNJ1Gh7isNYw3Gt9beNyPDuWQhqKA9DMne1u9kZjm"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,44 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/libraries/Patient.sol": "Patient"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/libraries/Patient.sol": {
+			"keccak256": "0x86a94d91791786b81657ad997930f9da4ec799caa4e6e884c0fb903ca9ba615b",
+			"urls": [
+				"bzz-raw://3df5eea550e42672e1068ff24b644d45486ca41888fddfbb764594402a907200",
+				"dweb:/ipfs/QmQ1i83cRpWuqb9rzLnytNoWf5KsuPosrLnbBfrUTjZsg8"
+			]
+		}
+	},
+	"version": 1
+}
