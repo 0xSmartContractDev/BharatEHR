@@ -190,6 +190,19 @@
 				"inputs": [
 					{
 						"internalType": "bytes32",
+						"name": "apptId",
+						"type": "bytes32"
+					}
+				],
+				"name": "cancelAppointment",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
 						"name": "slot",
 						"type": "bytes32"
 					}
@@ -289,6 +302,114 @@
 				],
 				"stateMutability": "pure",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "apptId",
+						"type": "bytes32"
+					},
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "id",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "appointmentDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "appointmentTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "patientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "doctorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "reminderMethod",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reminderBeforeInMins",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "message",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Appointment.AppointmentRecord",
+						"name": "_appointment",
+						"type": "tuple"
+					}
+				],
+				"name": "modifyAppointment",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "id",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint256",
+								"name": "appointmentDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "appointmentTime",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "patientAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "doctorAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "reminderMethod",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reminderBeforeInMins",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "message",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Appointment.AppointmentRecord",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -319,10 +440,10 @@
 	},
 	"sources": {
 		"contracts/AppointmentScheduler.sol": {
-			"keccak256": "0xfdc5af4af4a5a5c5ac4ebb31d71aa31703fc3e5aa229856854db474d84b4e9d8",
+			"keccak256": "0xe19ba70b0253ebac8be763332a300513aa561aae51fb96eeffbdda2e373970d6",
 			"urls": [
-				"bzz-raw://615f5b1c8055aaa2b6068de38f826e0584ffb84ac1e54f9b16e8fe1c437f305e",
-				"dweb:/ipfs/QmcdvpdkTk5PHKKSYhjXRUnsyYTgonDrpgJw3N4X6LLFMQ"
+				"bzz-raw://939a9733f883cdf9ac1e4a8c420df7d1b05f52a2bc70993cd97366d64ce54bbe",
+				"dweb:/ipfs/QmfUfvTt3HGiu6hNFwScKg1VDYWuFcMWSV1gZBsNdQMRGz"
 			]
 		},
 		"contracts/libraries/Appointment.sol": {

@@ -45,7 +45,7 @@ contract AppointmentScheduler {
         return appointments[apptId];
     }
     
-    /*function modifyAppointment(bytes32 apptId,Appointment.AppointmentRecord memory _appointment) external returns (Appointment.AppointmentRecord memory){
+    function modifyAppointment(bytes32 apptId,Appointment.AppointmentRecord memory _appointment) external returns (Appointment.AppointmentRecord memory){
         //Appointment memory appointment = appointments[apptId];
         bytes32 id = getHashId(_appointment.appointmentDate,_appointment.appointmentTime);
         if(apptId != id){
@@ -54,18 +54,17 @@ contract AppointmentScheduler {
             appointmentStatus[id] = false;
             
             // Reset the old appointment to make it a default appointment.
-            appointments[apptId] = new Appointment.AppointmentRecord();
+            //appointments[apptId] = new Appointment.AppointmentRecord();
             //Change old appointment slot to available.
             appointmentStatus[apptId] = true;            
         }
-        appointments[apptId] = _appointment;    
+        appointments[apptId] = _appointment;  
         return _appointment;
     }
     
-    function cancelAppointment(bytes32 apptId) external view  {
-        appointments[apptId] = new Appointment.AppointmentRecord();
+    function cancelAppointment(bytes32 apptId) external {        
         appointmentStatus[apptId] = true;
-    } */
+    } 
 
     // Appointment Reschedule Function.
 
