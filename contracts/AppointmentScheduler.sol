@@ -11,6 +11,21 @@ contract AppointmentScheduler {
     mapping (bytes32 => Appointment.AppointmentRecord) public appointments;    
     mapping(bytes32 => bool) public appointmentStatus;
     
+    Appointment.AppointmentRecord private defaultAppointment;
+    
+    //Constructor
+    constructor() public {
+            defaultAppointment = Appointment.AppointmentRecord({
+                id: bytes32(0),
+                appointmentDate : 0,
+                appointmentTime : 0,
+                patientAddress : address(0),
+                doctorAddress : address(0),
+                reminderMethod : "",
+                reminderBeforeInMins : 0,
+                message : ""
+            });    
+    }
 
     /*modifier checkIsDefault(Appointment appt) {
         require(msg.sender == admin, "Access Denied: Only the admin can perform this action");

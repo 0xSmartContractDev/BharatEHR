@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes32",
@@ -314,10 +319,10 @@
 	},
 	"sources": {
 		"contracts/AppointmentScheduler.sol": {
-			"keccak256": "0xb3c294d6495bd1090a5b35cd3540f7c48a9a1bb004d6f62eddfeb8f56c063b84",
+			"keccak256": "0xfdc5af4af4a5a5c5ac4ebb31d71aa31703fc3e5aa229856854db474d84b4e9d8",
 			"urls": [
-				"bzz-raw://52e41b4002e9e0c646232358fbe7950b91d361d336ce880d2622db94abe86d5f",
-				"dweb:/ipfs/QmSN7wAZNtbxDfJZverEQ6TTQ7PpTdi2JVd7GWgVuLu6GD"
+				"bzz-raw://615f5b1c8055aaa2b6068de38f826e0584ffb84ac1e54f9b16e8fe1c437f305e",
+				"dweb:/ipfs/QmcdvpdkTk5PHKKSYhjXRUnsyYTgonDrpgJw3N4X6LLFMQ"
 			]
 		},
 		"contracts/libraries/Appointment.sol": {
