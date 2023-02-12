@@ -1,20 +1,16 @@
     
     library Reminder{
         
-    struct AppointmentReminder {
-        address doctorAddress;
+    enum ReminderStatus {
+         NOT_SENT,
+        SENT
+    }
+
+    struct AppointmentReminder {        
         string reminderMethod;
         uint256 reminderFrequency;
-        string message;        
-    }
-        struct AppointmentRecord {
-        bytes32 id;
-        uint256 date;
-        uint256 time;
-        address patientAddress;
-        address doctorAddress;
-        bool isAvailable;
-        //AppointmentReminder reminder;
+        string message;
+        ReminderStatus status;
     }
     }
     

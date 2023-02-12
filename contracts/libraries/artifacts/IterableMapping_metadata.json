@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/libraries/Appointment.sol": "Appointment"
+			"contracts/libraries/IterableMapping.sol": "IterableMapping"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -37,6 +37,14 @@
 			"urls": [
 				"bzz-raw://242f465a5732797a153fe045e02f520dcfaa0ab839d7e97c7dc90ac800a0a9f4",
 				"dweb:/ipfs/Qmd9gQY6pooj3VZd278PkQ9fm7U97uaDdsTpf8GaKsMtdH"
+			]
+		},
+		"contracts/libraries/IterableMapping.sol": {
+			"keccak256": "0x4c8631061a47eeb5c3fe6ea598e6e73c580861c7591e9eed13a7fd2d034aad51",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://419ffc0183f50cbdcc2032e44c4bfc9220ff9d16ab4bbce8772a6b75c6ccc11b",
+				"dweb:/ipfs/QmbALMwdwTufMZgVEB8ErGGGo5g88mVcHDyFWZBQz4ZFpR"
 			]
 		}
 	},

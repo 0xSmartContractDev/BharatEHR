@@ -6,6 +6,44 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "patientAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "msg",
+						"type": "string"
+					}
+				],
+				"name": "AppointmentCancelled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "patientAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "msg",
+						"type": "string"
+					}
+				],
+				"name": "AppointmentCreated",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes32",
@@ -50,6 +88,11 @@
 						"type": "uint256"
 					},
 					{
+						"internalType": "bool",
+						"name": "isAvailable",
+						"type": "bool"
+					},
+					{
 						"internalType": "address",
 						"name": "patientAddress",
 						"type": "address"
@@ -60,19 +103,31 @@
 						"type": "address"
 					},
 					{
-						"internalType": "string",
-						"name": "reminderMethod",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "reminderBeforeInMins",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
+						"components": [
+							{
+								"internalType": "string",
+								"name": "reminderMethod",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "reminderFrequency",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "message",
+								"type": "string"
+							},
+							{
+								"internalType": "enum Appointment.ReminderStatus",
+								"name": "status",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct Appointment.AppointmentReminder",
+						"name": "reminder",
+						"type": "tuple"
 					}
 				],
 				"stateMutability": "view",
@@ -98,6 +153,11 @@
 								"type": "uint256"
 							},
 							{
+								"internalType": "bool",
+								"name": "isAvailable",
+								"type": "bool"
+							},
+							{
 								"internalType": "address",
 								"name": "patientAddress",
 								"type": "address"
@@ -108,19 +168,31 @@
 								"type": "address"
 							},
 							{
-								"internalType": "string",
-								"name": "reminderMethod",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "reminderBeforeInMins",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "message",
-								"type": "string"
+								"components": [
+									{
+										"internalType": "string",
+										"name": "reminderMethod",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "reminderFrequency",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "message",
+										"type": "string"
+									},
+									{
+										"internalType": "enum Appointment.ReminderStatus",
+										"name": "status",
+										"type": "uint8"
+									}
+								],
+								"internalType": "struct Appointment.AppointmentReminder",
+								"name": "reminder",
+								"type": "tuple"
 							}
 						],
 						"internalType": "struct Appointment.AppointmentRecord",
@@ -148,6 +220,11 @@
 								"type": "uint256"
 							},
 							{
+								"internalType": "bool",
+								"name": "isAvailable",
+								"type": "bool"
+							},
+							{
 								"internalType": "address",
 								"name": "patientAddress",
 								"type": "address"
@@ -158,19 +235,31 @@
 								"type": "address"
 							},
 							{
-								"internalType": "string",
-								"name": "reminderMethod",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "reminderBeforeInMins",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "message",
-								"type": "string"
+								"components": [
+									{
+										"internalType": "string",
+										"name": "reminderMethod",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "reminderFrequency",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "message",
+										"type": "string"
+									},
+									{
+										"internalType": "enum Appointment.ReminderStatus",
+										"name": "status",
+										"type": "uint8"
+									}
+								],
+								"internalType": "struct Appointment.AppointmentReminder",
+								"name": "reminder",
+								"type": "tuple"
 							}
 						],
 						"internalType": "struct Appointment.AppointmentRecord",
@@ -190,7 +279,13 @@
 					}
 				],
 				"name": "cancelAppointment",
-				"outputs": [],
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
@@ -241,6 +336,11 @@
 								"type": "uint256"
 							},
 							{
+								"internalType": "bool",
+								"name": "isAvailable",
+								"type": "bool"
+							},
+							{
 								"internalType": "address",
 								"name": "patientAddress",
 								"type": "address"
@@ -251,19 +351,31 @@
 								"type": "address"
 							},
 							{
-								"internalType": "string",
-								"name": "reminderMethod",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "reminderBeforeInMins",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "message",
-								"type": "string"
+								"components": [
+									{
+										"internalType": "string",
+										"name": "reminderMethod",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "reminderFrequency",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "message",
+										"type": "string"
+									},
+									{
+										"internalType": "enum Appointment.ReminderStatus",
+										"name": "status",
+										"type": "uint8"
+									}
+								],
+								"internalType": "struct Appointment.AppointmentReminder",
+								"name": "reminder",
+								"type": "tuple"
 							}
 						],
 						"internalType": "struct Appointment.AppointmentRecord",
@@ -299,111 +411,10 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bytes32",
-						"name": "apptId",
-						"type": "bytes32"
-					},
-					{
-						"components": [
-							{
-								"internalType": "bytes32",
-								"name": "id",
-								"type": "bytes32"
-							},
-							{
-								"internalType": "uint256",
-								"name": "appointmentDate",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "appointmentTime",
-								"type": "uint256"
-							},
-							{
-								"internalType": "address",
-								"name": "patientAddress",
-								"type": "address"
-							},
-							{
-								"internalType": "address",
-								"name": "doctorAddress",
-								"type": "address"
-							},
-							{
-								"internalType": "string",
-								"name": "reminderMethod",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "reminderBeforeInMins",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "message",
-								"type": "string"
-							}
-						],
-						"internalType": "struct Appointment.AppointmentRecord",
-						"name": "_appointment",
-						"type": "tuple"
-					}
-				],
-				"name": "modifyAppointment",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "bytes32",
-								"name": "id",
-								"type": "bytes32"
-							},
-							{
-								"internalType": "uint256",
-								"name": "appointmentDate",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "appointmentTime",
-								"type": "uint256"
-							},
-							{
-								"internalType": "address",
-								"name": "patientAddress",
-								"type": "address"
-							},
-							{
-								"internalType": "address",
-								"name": "doctorAddress",
-								"type": "address"
-							},
-							{
-								"internalType": "string",
-								"name": "reminderMethod",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "reminderBeforeInMins",
-								"type": "uint256"
-							},
-							{
-								"internalType": "string",
-								"name": "message",
-								"type": "string"
-							}
-						],
-						"internalType": "struct Appointment.AppointmentRecord",
-						"name": "",
-						"type": "tuple"
-					}
-				],
-				"stateMutability": "nonpayable",
+				"inputs": [],
+				"name": "sendAppointmentReminder",
+				"outputs": [],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -435,17 +446,17 @@
 	},
 	"sources": {
 		"contracts/AppointmentScheduler.sol": {
-			"keccak256": "0x624bfb54a3a6c500932132a26daed2c2faa224bd93c5ff3ae677abadff31fbc1",
+			"keccak256": "0x58719ae1d9fe78268c2e76e57ae7f4804460ac2c5901caae1ed03fc46b742fca",
 			"urls": [
-				"bzz-raw://2990701139070e52d3d17408653ae2ff88bd32fedfb289fb607f987ac4cd2ed5",
-				"dweb:/ipfs/QmZuuUYScQpdSahuSTexYyCvhQCCCf3sgxLobftmLAWMT6"
+				"bzz-raw://69bfef2701616f6411a698496d09f6e40a18a4e6e7ce1514749011f9f1740e28",
+				"dweb:/ipfs/QmbTBC9xNZqQEFuV7s3Ht1WXkqcfVcfz8t4RbRav1sApnR"
 			]
 		},
 		"contracts/libraries/Appointment.sol": {
-			"keccak256": "0x85959158e69195b8ec0b533226411b01bca82fb8afcfab3f2271876f119ca211",
+			"keccak256": "0xa240196cec5e37f5c7de6630af21ac133a8e08a43ccf895f7417dce41b542db3",
 			"urls": [
-				"bzz-raw://c4f40d2fdf885066b23d332252baa5dafc792b08188b422cc4350e9157b79452",
-				"dweb:/ipfs/QmeUeYxdbvvHf128kGnunyH9JiHB7mCj12dyMa9iiVE7uU"
+				"bzz-raw://242f465a5732797a153fe045e02f520dcfaa0ab839d7e97c7dc90ac800a0a9f4",
+				"dweb:/ipfs/Qmd9gQY6pooj3VZd278PkQ9fm7U97uaDdsTpf8GaKsMtdH"
 			]
 		},
 		"contracts/libraries/StructHelpers.sol": {

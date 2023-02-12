@@ -33,10 +33,10 @@
 	},
 	"sources": {
 		"contracts/libraries/AppointmentReminder.sol": {
-			"keccak256": "0xc47d288db57596138b60e1fd805bf44d594d96c2fc4ea395dc88d4381db8e1e8",
+			"keccak256": "0x9b44f7b59c14c9d9dd8cbecbc4d559706317085930dbd568ddddb4451ebdf6d5",
 			"urls": [
-				"bzz-raw://fa7cb58f32b69e326634e60c3e703f7cd72d2c136e08ceda6feeba4ed6aa1cae",
-				"dweb:/ipfs/QmURurt3tJb73mpCNAkHXyoZUhN5Sf7NQxWDDWKZhYgXbX"
+				"bzz-raw://8c0351f26a46363e5fb447d2146c25c13d0211a432395b674cae89652a589d89",
+				"dweb:/ipfs/QmS9P1KzMk4i5C7Pdb4e8FH7HQQGRC1UgmBJEk5oPdwoju"
 			]
 		}
 	},
