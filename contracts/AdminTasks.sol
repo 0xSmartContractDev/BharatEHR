@@ -2,19 +2,14 @@ pragma solidity ^0.8.17;
 
 import "./libraries/Patient.sol";
 import "./libraries/Doctor.sol";
+import "./OwnableAdmin.sol";
 
-contract AdminTasks {
-    address public owner;
-    address public admin;
+contract AdminTasks is OwnableAdmin{
     
-
     mapping (address => Patient.PatientDetails) patients;
     mapping (address => Doctor.DoctorRecord) doctors;
 
-    constructor(address adminAddress) public {
-        owner = msg.sender;
-        admin = adminAddress;
-    }
+
     modifier onlyEOA() {
         address callingAddress = msg.sender; 
         uint32 size;

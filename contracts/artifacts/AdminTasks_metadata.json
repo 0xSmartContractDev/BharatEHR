@@ -411,10 +411,10 @@
 	},
 	"sources": {
 		"contracts/AdminTasks.sol": {
-			"keccak256": "0x10d4868d6d5cebe271d28ea3598f63888fd4a8e9165d0f542f88ee9ff7789ecc",
+			"keccak256": "0x0691908fa61e242206d9673f8c28df337a92fc5903ef6cc76f0bda793119ca18",
 			"urls": [
-				"bzz-raw://fceabdaf8eacca7c68dde366b698bd738c5ed9f64ce933046401a08da1579670",
-				"dweb:/ipfs/Qme6dpW6GADPrPSpXzgeSDTU6L8mfzEJoruXCSGD2F21qM"
+				"bzz-raw://376d9a317fd000ae401b7fea39641e71e71eb7f47c60189c5e10de1fbf561082",
+				"dweb:/ipfs/QmUdMbYCBR9QPC2yheLu2T9mnoDBnPMXPsS4JKor5jhAKq"
 			]
 		},
 		"contracts/libraries/Doctor.sol": {
