@@ -33,10 +33,10 @@
 	},
 	"sources": {
 		"contracts/libraries/Doctor.sol": {
-			"keccak256": "0x887794df4f616c1091caf80ec829a29ea5aeeae68c236dd1a3e2ec6a8f76cfb9",
+			"keccak256": "0xb6db4a7142a18694b2b97ef15cab8d8f450d7373c55f8f5dd96a8362251907a7",
 			"urls": [
-				"bzz-raw://855ce3becbc72390c6722c8b2d4d02debbea00a663ba3213522d38386e6b464a",
-				"dweb:/ipfs/QmSYCr6EAaCvxdUNcuHZkCBviYJDNBP1eDKaQCyXUh2qwi"
+				"bzz-raw://f78ce28d46f4c6cd7b17096e5cab5fddec2e858109918ec80838c03c1793d6cc",
+				"dweb:/ipfs/QmduQsdDSrahUygT66pxXiavKj68cZfdEi4wfqVV68VFt6"
 			]
 		}
 	},

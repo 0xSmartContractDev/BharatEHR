@@ -53,10 +53,10 @@
 	},
 	"sources": {
 		"contracts/libraries/StructHelpers.sol": {
-			"keccak256": "0xb4b900ab9c112dd225a61d5cb2d2e6eddfb724f63eaa3b93e586ea791922b4bd",
+			"keccak256": "0x36d12fd9c2f878eaed7d13e80f3da0c114b05fb2eb33d5de28ec4e50b4ea7e61",
 			"urls": [
-				"bzz-raw://b5281a8cd6545bccca5b757f7887326c8dc83da5e6d6f4a5ba6e42e786e51989",
-				"dweb:/ipfs/QmdLYVkvSRZ8rCwXmu35KPoy5HE6N3Pt8SCEaA4yAUg373"
+				"bzz-raw://30d287d1cbf5bfd20bac2623b5f5f53efbd26088b233fb6b3d9d55b01c25e343",
+				"dweb:/ipfs/Qmb67jLkKCTAUArEZh1GYmpAEgA2Xk3dz8hh1n4bF9uzDB"
 			]
 		}
 	},

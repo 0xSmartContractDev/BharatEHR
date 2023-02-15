@@ -1,4 +1,4 @@
-pragma solidity ^0.8.17;
+pragma solidity >=0.8.0 <=0.8.17;
 
 import "./libraries/Patient.sol";
 import "./libraries/Doctor.sol";
@@ -22,16 +22,7 @@ contract AdminTasks is OwnableAdmin{
         );
         _;
     }
-
-    modifier onlyAdmin() {
-        require(msg.sender == admin, "Access Denied: Only the admin can perform this action");
-        _;
-    }
-
-    modifier onlyOwner() {
-        require(msg.sender == owner, "Access Denied: Only the owner can perform this action");
-        _;
-    }    
+ 
 
     // Function to set the admin
     function setAdmin(address _admin) external onlyOwner {

@@ -446,24 +446,24 @@
 	},
 	"sources": {
 		"contracts/AppointmentScheduler.sol": {
-			"keccak256": "0x58719ae1d9fe78268c2e76e57ae7f4804460ac2c5901caae1ed03fc46b742fca",
+			"keccak256": "0xb8d4b748e8eb9a9ef75bdebde3b861b233aaffb5d07eafdc18a55d85c69152ac",
 			"urls": [
-				"bzz-raw://69bfef2701616f6411a698496d09f6e40a18a4e6e7ce1514749011f9f1740e28",
-				"dweb:/ipfs/QmbTBC9xNZqQEFuV7s3Ht1WXkqcfVcfz8t4RbRav1sApnR"
+				"bzz-raw://8723050af940d9d9bb15fde13f1b99823f952fbe53570fc63648ac768b66ee8d",
+				"dweb:/ipfs/Qmd2jJbir1ejGunwXptd22qFEiPcxtzsmtAVZCfGLQck8R"
 			]
 		},
 		"contracts/libraries/Appointment.sol": {
-			"keccak256": "0xa240196cec5e37f5c7de6630af21ac133a8e08a43ccf895f7417dce41b542db3",
+			"keccak256": "0x24358b165f2a3abc7fcc2cfbb8343aeeb6234e7e6f2587f9eb6a7c73975e59c5",
 			"urls": [
-				"bzz-raw://242f465a5732797a153fe045e02f520dcfaa0ab839d7e97c7dc90ac800a0a9f4",
-				"dweb:/ipfs/Qmd9gQY6pooj3VZd278PkQ9fm7U97uaDdsTpf8GaKsMtdH"
+				"bzz-raw://073a8166a9da08fa3a948750fd831f66d9091bef91336f6c277e9c261afa762b",
+				"dweb:/ipfs/QmYyjz9d2vJaD2D5QbA8VhFywdRuQqacTSUw1go5SC35Dh"
 			]
 		},
 		"contracts/libraries/StructHelpers.sol": {
-			"keccak256": "0xb4b900ab9c112dd225a61d5cb2d2e6eddfb724f63eaa3b93e586ea791922b4bd",
+			"keccak256": "0x36d12fd9c2f878eaed7d13e80f3da0c114b05fb2eb33d5de28ec4e50b4ea7e61",
 			"urls": [
-				"bzz-raw://b5281a8cd6545bccca5b757f7887326c8dc83da5e6d6f4a5ba6e42e786e51989",
-				"dweb:/ipfs/QmdLYVkvSRZ8rCwXmu35KPoy5HE6N3Pt8SCEaA4yAUg373"
+				"bzz-raw://30d287d1cbf5bfd20bac2623b5f5f53efbd26088b233fb6b3d9d55b01c25e343",
+				"dweb:/ipfs/Qmb67jLkKCTAUArEZh1GYmpAEgA2Xk3dz8hh1n4bF9uzDB"
 			]
 		}
 	},

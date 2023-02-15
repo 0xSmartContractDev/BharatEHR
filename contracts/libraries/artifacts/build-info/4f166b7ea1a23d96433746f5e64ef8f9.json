@@ -1,5 +1,5 @@
 {
-	"id": "d9897a0b4e413186096fdaa03d836d03",
+	"id": "4f166b7ea1a23d96433746f5e64ef8f9",
 	"_format": "hh-sol-build-info-1",
 	"solcVersion": "0.8.17",
 	"solcLongVersion": "0.8.17+commit.8df45f5f",
@@ -7,7 +7,7 @@
 		"language": "Solidity",
 		"sources": {
 			"contracts/libraries/Appointment.sol": {
-				"content": "pragma solidity ^0.8.17;\n\n//import \"./AppointmentReminder.sol\";\n\nlibrary Appointment{\n    struct AppointmentRecord {\n        bytes32 id;\n        uint256 appointmentDate;\n        uint256 appointmentTime;\n        bool    isAvailable;\n        address patientAddress;\n        address doctorAddress;        \n        AppointmentReminder reminder;      \n    }\n    \n    enum ReminderStatus {\n        NOT_SENT,\n        SENT,\n        PENDING\n    }\n\n    struct AppointmentReminder {        \n        string reminderMethod;\n        uint256 reminderFrequency;\n        string message;\n        ReminderStatus status;\n    }\n}    "
+				"content": "pragma solidity >=0.8.0 <=0.8.17;\n\n//import \"./AppointmentReminder.sol\";\n\nlibrary Appointment{\n    struct AppointmentRecord {\n        bytes32 id;\n        uint256 appointmentDate;\n        uint256 appointmentTime;\n        bool    isAvailable;\n        address patientAddress;\n        address doctorAddress;        \n        AppointmentReminder reminder;      \n    }\n    \n    enum ReminderStatus {\n        NOT_SENT,\n        SENT,\n        PENDING\n    }\n\n    struct AppointmentReminder {        \n        string reminderMethod;\n        uint256 reminderFrequency;\n        string message;\n        ReminderStatus status;\n    }\n}    "
 			}
 		},
 		"settings": {
@@ -48,23 +48,23 @@
 						"version": 1
 					},
 					"evm": {
-						"assembly": "    /* \"contracts/libraries/Appointment.sol\":65:608  library Appointment{... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n  0x0b\n  dup3\n  dup3\n  dup3\n  codecopy\n  dup1\n  mload\n  0x00\n  byte\n  0x73\n  eq\n  tag_1\n  jumpi\n  mstore(0x00, 0x4e487b7100000000000000000000000000000000000000000000000000000000)\n  mstore(0x04, 0x00)\n  revert(0x00, 0x24)\ntag_1:\n  mstore(0x00, address)\n  0x73\n  dup2\n  mstore8\n  dup3\n  dup2\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/libraries/Appointment.sol\":65:608  library Appointment{... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220431968c9d99b4884f7cb024c83a320073ebddb290340d7be6aecaef300a044a164736f6c63430008110033\n}\n",
+						"assembly": "    /* \"contracts/libraries/Appointment.sol\":74:617  library Appointment{... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n  0x0b\n  dup3\n  dup3\n  dup3\n  codecopy\n  dup1\n  mload\n  0x00\n  byte\n  0x73\n  eq\n  tag_1\n  jumpi\n  mstore(0x00, 0x4e487b7100000000000000000000000000000000000000000000000000000000)\n  mstore(0x04, 0x00)\n  revert(0x00, 0x24)\ntag_1:\n  mstore(0x00, address)\n  0x73\n  dup2\n  mstore8\n  dup3\n  dup2\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/libraries/Appointment.sol\":74:617  library Appointment{... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220015a1e34685a11f140dec18f690cd8af9feaa876677bd8fe7647ff531d41159c64736f6c63430008110033\n}\n",
 						"bytecode": {
 							"functionDebugData": {},
 							"generatedSources": [],
 							"linkReferences": {},
-							"object": "60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220431968c9d99b4884f7cb024c83a320073ebddb290340d7be6aecaef300a044a164736f6c63430008110033",
-							"opcodes": "PUSH1 0x56 PUSH1 0x50 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x43 JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 NUMBER NOT PUSH9 0xC9D99B4884F7CB024C DUP4 LOG3 KECCAK256 SMOD RETURNDATACOPY 0xBD 0xDB 0x29 SUB BLOCKHASH 0xD7 0xBE PUSH11 0xECAEF300A044A164736F6C PUSH4 0x43000811 STOP CALLER ",
-							"sourceMap": "65:543:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+							"object": "60566050600b82828239805160001a6073146043577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220015a1e34685a11f140dec18f690cd8af9feaa876677bd8fe7647ff531d41159c64736f6c63430008110033",
+							"opcodes": "PUSH1 0x56 PUSH1 0x50 PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH1 0x0 BYTE PUSH1 0x73 EQ PUSH1 0x43 JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 MSTORE PUSH1 0x0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST ADDRESS PUSH1 0x0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 ADD GAS 0x1E CALLVALUE PUSH9 0x5A11F140DEC18F690C 0xD8 0xAF SWAP16 0xEA 0xA8 PUSH23 0x677BD8FE7647FF531D41159C64736F6C63430008110033 ",
+							"sourceMap": "74:543:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
 						},
 						"deployedBytecode": {
 							"functionDebugData": {},
 							"generatedSources": [],
 							"immutableReferences": {},
 							"linkReferences": {},
-							"object": "73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220431968c9d99b4884f7cb024c83a320073ebddb290340d7be6aecaef300a044a164736f6c63430008110033",
-							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 NUMBER NOT PUSH9 0xC9D99B4884F7CB024C DUP4 LOG3 KECCAK256 SMOD RETURNDATACOPY 0xBD 0xDB 0x29 SUB BLOCKHASH 0xD7 0xBE PUSH11 0xECAEF300A044A164736F6C PUSH4 0x43000811 STOP CALLER ",
-							"sourceMap": "65:543:0:-:0;;;;;;;;"
+							"object": "73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220015a1e34685a11f140dec18f690cd8af9feaa876677bd8fe7647ff531d41159c64736f6c63430008110033",
+							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 ADD GAS 0x1E CALLVALUE PUSH9 0x5A11F140DEC18F690C 0xD8 0xAF SWAP16 0xEA 0xA8 PUSH23 0x677BD8FE7647FF531D41159C64736F6C63430008110033 ",
+							"sourceMap": "74:543:0:-:0;;;;;;;;"
 						},
 						"gasEstimates": {
 							"creation": {
@@ -76,289 +76,289 @@
 						"legacyAssembly": {
 							".code": [
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH #[$]",
 									"source": 0,
 									"value": "0000000000000000000000000000000000000000000000000000000000000000"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH [$]",
 									"source": 0,
 									"value": "0000000000000000000000000000000000000000000000000000000000000000"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "B"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "DUP3",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "DUP3",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "DUP3",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "CODECOPY",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "DUP1",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "MLOAD",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "BYTE",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "73"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "EQ",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH [tag]",
 									"source": 0,
 									"value": "1"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "JUMPI",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "4E487B7100000000000000000000000000000000000000000000000000000000"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "MSTORE",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "4"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "MSTORE",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "24"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "REVERT",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "tag",
 									"source": 0,
 									"value": "1"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "JUMPDEST",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "ADDRESS",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "0"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "MSTORE",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "PUSH",
 									"source": 0,
 									"value": "73"
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "DUP2",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "MSTORE8",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "DUP3",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "DUP2",
 									"source": 0
 								},
 								{
-									"begin": 65,
-									"end": 608,
+									"begin": 74,
+									"end": 617,
 									"name": "RETURN",
 									"source": 0
 								}
 							],
 							".data": {
 								"0": {
-									".auxdata": "a2646970667358221220431968c9d99b4884f7cb024c83a320073ebddb290340d7be6aecaef300a044a164736f6c63430008110033",
+									".auxdata": "a2646970667358221220015a1e34685a11f140dec18f690cd8af9feaa876677bd8fe7647ff531d41159c64736f6c63430008110033",
 									".code": [
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "PUSHDEPLOYADDRESS",
 											"source": 0
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "ADDRESS",
 											"source": 0
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "EQ",
 											"source": 0
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "PUSH",
 											"source": 0,
 											"value": "80"
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "PUSH",
 											"source": 0,
 											"value": "40"
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "MSTORE",
 											"source": 0
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "PUSH",
 											"source": 0,
 											"value": "0"
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "DUP1",
 											"source": 0
 										},
 										{
-											"begin": 65,
-											"end": 608,
+											"begin": 74,
+											"end": 617,
 											"name": "REVERT",
 											"source": 0
 										}
@@ -372,7 +372,7 @@
 						},
 						"methodIdentifiers": {}
 					},
-					"metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/libraries/Appointment.sol\":\"Appointment\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/libraries/Appointment.sol\":{\"keccak256\":\"0xa240196cec5e37f5c7de6630af21ac133a8e08a43ccf895f7417dce41b542db3\",\"urls\":[\"bzz-raw://242f465a5732797a153fe045e02f520dcfaa0ab839d7e97c7dc90ac800a0a9f4\",\"dweb:/ipfs/Qmd9gQY6pooj3VZd278PkQ9fm7U97uaDdsTpf8GaKsMtdH\"]}},\"version\":1}",
+					"metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/libraries/Appointment.sol\":\"Appointment\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/libraries/Appointment.sol\":{\"keccak256\":\"0x24358b165f2a3abc7fcc2cfbb8343aeeb6234e7e6f2587f9eb6a7c73975e59c5\",\"urls\":[\"bzz-raw://073a8166a9da08fa3a948750fd831f66d9091bef91336f6c277e9c261afa762b\",\"dweb:/ipfs/QmYyjz9d2vJaD2D5QbA8VhFywdRuQqacTSUw1go5SC35Dh\"]}},\"version\":1}",
 					"storageLayout": {
 						"storage": [],
 						"types": null
@@ -416,12 +416,15 @@
 							"id": 1,
 							"literals": [
 								"solidity",
-								"^",
+								">=",
+								"0.8",
+								".0",
+								"<=",
 								"0.8",
 								".17"
 							],
 							"nodeType": "PragmaDirective",
-							"src": "0:24:0"
+							"src": "0:33:0"
 						},
 						{
 							"abstract": false,
@@ -435,7 +438,7 @@
 								32
 							],
 							"name": "Appointment",
-							"nameLocation": "73:11:0",
+							"nameLocation": "82:11:0",
 							"nodeType": "ContractDefinition",
 							"nodes": [
 								{
@@ -447,10 +450,10 @@
 											"id": 3,
 											"mutability": "mutable",
 											"name": "id",
-											"nameLocation": "133:2:0",
+											"nameLocation": "142:2:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 17,
-											"src": "125:10:0",
+											"src": "134:10:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -461,7 +464,7 @@
 												"id": 2,
 												"name": "bytes32",
 												"nodeType": "ElementaryTypeName",
-												"src": "125:7:0",
+												"src": "134:7:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_bytes32",
 													"typeString": "bytes32"
@@ -474,10 +477,10 @@
 											"id": 5,
 											"mutability": "mutable",
 											"name": "appointmentDate",
-											"nameLocation": "153:15:0",
+											"nameLocation": "162:15:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 17,
-											"src": "145:23:0",
+											"src": "154:23:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -488,7 +491,7 @@
 												"id": 4,
 												"name": "uint256",
 												"nodeType": "ElementaryTypeName",
-												"src": "145:7:0",
+												"src": "154:7:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_uint256",
 													"typeString": "uint256"
@@ -501,10 +504,10 @@
 											"id": 7,
 											"mutability": "mutable",
 											"name": "appointmentTime",
-											"nameLocation": "186:15:0",
+											"nameLocation": "195:15:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 17,
-											"src": "178:23:0",
+											"src": "187:23:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -515,7 +518,7 @@
 												"id": 6,
 												"name": "uint256",
 												"nodeType": "ElementaryTypeName",
-												"src": "178:7:0",
+												"src": "187:7:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_uint256",
 													"typeString": "uint256"
@@ -528,10 +531,10 @@
 											"id": 9,
 											"mutability": "mutable",
 											"name": "isAvailable",
-											"nameLocation": "219:11:0",
+											"nameLocation": "228:11:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 17,
-											"src": "211:19:0",
+											"src": "220:19:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -542,7 +545,7 @@
 												"id": 8,
 												"name": "bool",
 												"nodeType": "ElementaryTypeName",
-												"src": "211:4:0",
+												"src": "220:4:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_bool",
 													"typeString": "bool"
@@ -555,10 +558,10 @@
 											"id": 11,
 											"mutability": "mutable",
 											"name": "patientAddress",
-											"nameLocation": "248:14:0",
+											"nameLocation": "257:14:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 17,
-											"src": "240:22:0",
+											"src": "249:22:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -569,7 +572,7 @@
 												"id": 10,
 												"name": "address",
 												"nodeType": "ElementaryTypeName",
-												"src": "240:7:0",
+												"src": "249:7:0",
 												"stateMutability": "nonpayable",
 												"typeDescriptions": {
 													"typeIdentifier": "t_address",
@@ -583,10 +586,10 @@
 											"id": 13,
 											"mutability": "mutable",
 											"name": "doctorAddress",
-											"nameLocation": "280:13:0",
+											"nameLocation": "289:13:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 17,
-											"src": "272:21:0",
+											"src": "281:21:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -597,7 +600,7 @@
 												"id": 12,
 												"name": "address",
 												"nodeType": "ElementaryTypeName",
-												"src": "272:7:0",
+												"src": "281:7:0",
 												"stateMutability": "nonpayable",
 												"typeDescriptions": {
 													"typeIdentifier": "t_address",
@@ -611,10 +614,10 @@
 											"id": 16,
 											"mutability": "mutable",
 											"name": "reminder",
-											"nameLocation": "331:8:0",
+											"nameLocation": "340:8:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 17,
-											"src": "311:28:0",
+											"src": "320:28:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -628,14 +631,14 @@
 													"id": 14,
 													"name": "AppointmentReminder",
 													"nameLocations": [
-														"311:19:0"
+														"320:19:0"
 													],
 													"nodeType": "IdentifierPath",
 													"referencedDeclaration": 31,
-													"src": "311:19:0"
+													"src": "320:19:0"
 												},
 												"referencedDeclaration": 31,
-												"src": "311:19:0",
+												"src": "320:19:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_struct$_AppointmentReminder_$31_storage_ptr",
 													"typeString": "struct Appointment.AppointmentReminder"
@@ -645,10 +648,10 @@
 										}
 									],
 									"name": "AppointmentRecord",
-									"nameLocation": "97:17:0",
+									"nameLocation": "106:17:0",
 									"nodeType": "StructDefinition",
 									"scope": 32,
-									"src": "90:262:0",
+									"src": "99:262:0",
 									"visibility": "public"
 								},
 								{
@@ -658,29 +661,29 @@
 										{
 											"id": 18,
 											"name": "NOT_SENT",
-											"nameLocation": "392:8:0",
+											"nameLocation": "401:8:0",
 											"nodeType": "EnumValue",
-											"src": "392:8:0"
+											"src": "401:8:0"
 										},
 										{
 											"id": 19,
 											"name": "SENT",
-											"nameLocation": "410:4:0",
+											"nameLocation": "419:4:0",
 											"nodeType": "EnumValue",
-											"src": "410:4:0"
+											"src": "419:4:0"
 										},
 										{
 											"id": 20,
 											"name": "PENDING",
-											"nameLocation": "424:7:0",
+											"nameLocation": "433:7:0",
 											"nodeType": "EnumValue",
-											"src": "424:7:0"
+											"src": "433:7:0"
 										}
 									],
 									"name": "ReminderStatus",
-									"nameLocation": "367:14:0",
+									"nameLocation": "376:14:0",
 									"nodeType": "EnumDefinition",
-									"src": "362:75:0"
+									"src": "371:75:0"
 								},
 								{
 									"canonicalName": "Appointment.AppointmentReminder",
@@ -691,10 +694,10 @@
 											"id": 23,
 											"mutability": "mutable",
 											"name": "reminderMethod",
-											"nameLocation": "495:14:0",
+											"nameLocation": "504:14:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 31,
-											"src": "488:21:0",
+											"src": "497:21:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -705,7 +708,7 @@
 												"id": 22,
 												"name": "string",
 												"nodeType": "ElementaryTypeName",
-												"src": "488:6:0",
+												"src": "497:6:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_string_storage_ptr",
 													"typeString": "string"
@@ -718,10 +721,10 @@
 											"id": 25,
 											"mutability": "mutable",
 											"name": "reminderFrequency",
-											"nameLocation": "527:17:0",
+											"nameLocation": "536:17:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 31,
-											"src": "519:25:0",
+											"src": "528:25:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -732,7 +735,7 @@
 												"id": 24,
 												"name": "uint256",
 												"nodeType": "ElementaryTypeName",
-												"src": "519:7:0",
+												"src": "528:7:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_uint256",
 													"typeString": "uint256"
@@ -745,10 +748,10 @@
 											"id": 27,
 											"mutability": "mutable",
 											"name": "message",
-											"nameLocation": "561:7:0",
+											"nameLocation": "570:7:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 31,
-											"src": "554:14:0",
+											"src": "563:14:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -759,7 +762,7 @@
 												"id": 26,
 												"name": "string",
 												"nodeType": "ElementaryTypeName",
-												"src": "554:6:0",
+												"src": "563:6:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_string_storage_ptr",
 													"typeString": "string"
@@ -772,10 +775,10 @@
 											"id": 30,
 											"mutability": "mutable",
 											"name": "status",
-											"nameLocation": "593:6:0",
+											"nameLocation": "602:6:0",
 											"nodeType": "VariableDeclaration",
 											"scope": 31,
-											"src": "578:21:0",
+											"src": "587:21:0",
 											"stateVariable": false,
 											"storageLocation": "default",
 											"typeDescriptions": {
@@ -789,14 +792,14 @@
 													"id": 28,
 													"name": "ReminderStatus",
 													"nameLocations": [
-														"578:14:0"
+														"587:14:0"
 													],
 													"nodeType": "IdentifierPath",
 													"referencedDeclaration": 21,
-													"src": "578:14:0"
+													"src": "587:14:0"
 												},
 												"referencedDeclaration": 21,
-												"src": "578:14:0",
+												"src": "587:14:0",
 												"typeDescriptions": {
 													"typeIdentifier": "t_enum$_ReminderStatus_$21",
 													"typeString": "enum Appointment.ReminderStatus"
@@ -806,19 +809,19 @@
 										}
 									],
 									"name": "AppointmentReminder",
-									"nameLocation": "450:19:0",
+									"nameLocation": "459:19:0",
 									"nodeType": "StructDefinition",
 									"scope": 32,
-									"src": "443:163:0",
+									"src": "452:163:0",
 									"visibility": "public"
 								}
 							],
 							"scope": 33,
-							"src": "65:543:0",
+							"src": "74:543:0",
 							"usedErrors": []
 						}
 					],
-					"src": "0:612:0"
+					"src": "0:621:0"
 				},
 				"id": 0
 			}
