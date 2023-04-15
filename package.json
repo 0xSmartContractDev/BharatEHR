@@ -1,0 +1,39 @@
+{
+  "name": "bharatehr",
+  "version": "1.0.0",
+  "description": "BharatEHR is Electronic Health Record system to record patient data in blockchain way.",
+  "main": "hardhat.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acers90/BharatEHR.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acers90/BharatEHR/issues"
+  },
+  "homepage": "https://github.com/acers90/BharatEHR#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.5",
+    "ethereum-waffle": "^4.0.10",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.7",
+    "hardhat-contract-sizer": "^2.8.0",
+    "hardhat-gas-reporter": "^1.0.9",
+    "hardhat-waffle": "^0.0.1-security",
+    "solidity-coverage": "^0.8.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
